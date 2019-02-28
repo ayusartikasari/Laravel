@@ -19,8 +19,8 @@ class UserController extends Controller
         return view('admin.pages.user.add');
     }
 
-    public function save(Request $rreq)
+    public function save(Request $req)
     {
-        return 'Fungsi save';
+        return 'Fungsi Save';
     }
 }

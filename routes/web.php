@@ -22,7 +22,7 @@ Route::group(['middleware'=>['auth']], function(){
 		})->name('admin.home');
 
 		Route::prefix('user')->group(function(){
-			
+
 			Route::get('/','UserController@daftar')->name('admin.user')->middleware('akses.admin');
 
 			Route::get('/add','UserController@add')->name('admin.user.add')->middleware('akses.admin');
