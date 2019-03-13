@@ -32,14 +32,14 @@
 	</tr>
 	@foreach($data as $dt)
 	<tr>
-		<td>{{ $dt->name }}</td>
-		<td>{{ $dt->email }}</td>
-		<td>{{ $dt->akses }}</td>
-		<td>
-			<a href="#" class="btn btn-success btn-sm">
-				<i class="fa fa-w fa-edit"></i>
-			</a>
-			
+			<td>{{ $dt->name }}</td>
+			<td>{{ $dt->email }}</td>
+			<td>{{ $dt->akses }}</td>
+			<td>
+				<a href="#" class="btn btn-success btn-sm">
+					<i class="fa fa-w fa-edit"></i>
+				</a>
+
 			@if($dt->id != Auth::id() )
 			<button class="btn btn-danger btn-sm" type="button">
 				<i class="fa fa-w fa-trash"></i>

@@ -19,7 +19,7 @@ class UserSettingController extends Controller
     	$id = Auth::id();
     	\Validator::make($req->all(), [
     			'name'=>'required|between:3,100',
-    			'email'=>'required|email|unique:users,email,'.$id,
+    			'email'=>'required|email|unique:users,email,',
     			'password'=>'nullable|min:6',
     			'repassword'=>'same:password',
     	   ])->validate();
