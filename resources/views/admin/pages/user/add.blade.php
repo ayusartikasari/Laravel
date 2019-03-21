@@ -15,12 +15,11 @@
 
 <div class="row">
 	<div class="col-md-6">
-		<form method="POST" action="{{ route('admin.user.edit',['id'=>$rc->id]) }}">
+		<form method="post" action="{{ route('admin.user.add') }}">
 			{{ csrf_field() }}
-			<div class="card">
-				<div class="card-header">
-					<H5>Edit Data User</H5>
-				</div><!--End Card Header-->
+			<div class="card-header">
+				<h5>Buat User Baru</h5>
+			</div><!--End Card Header-->
 
 				<div class="card-body">
 					
