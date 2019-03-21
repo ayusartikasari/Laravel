@@ -59,7 +59,7 @@
 						<input type="password" name="repassword"
 						class="form-control {{ $errors->has('repassword')?'is-invalid':'' }}"
 						id="iRePassword" placeholder="RePassword" required>
-						<label for="iRePassword">Re rePassword</label>
+						<label for="iRePassword">Re Password</label>
 						@if($errors->has('repassword'))
 						<div class="invalid-feedback">{{ $errors->first('repassword') }}</div>
 						@endif

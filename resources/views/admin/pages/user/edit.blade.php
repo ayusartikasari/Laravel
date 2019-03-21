@@ -1,7 +1,7 @@
 @extends('admin.main')
-@section('title','User Tambah')
+@section('title','User Edit')
 @section('content')
-<h1>User <small class="text-muted">Tambah</small></h1>
+<h1>User <small class="text-muted">Edit</small></h1>
 <hr>
 
 @if(session('result') == 'fail')
@@ -15,11 +15,10 @@
 
 <div class="row">
 	<div class="col-md-6">
-		<form method="POST" action="{{ route('admin.user.add' }}">
+		<form method="post" action="{{ route('admin.user.edit',['id'=>$rc->id]) }}">
 			{{ csrf_field() }}
-			<div class="card">
-				<div class="card-header">
-					<H5>Buat User Baru</H5>
+			<div class="card-header">
+					<H5>Edit Data User</H5>
 				</div><!--End Card Header-->
 
 				<div class="card-body">
@@ -62,8 +61,8 @@
 					<div class="form-group form-label-group">
 						<input type="password" name="repassword"
 						class="form-control {{ $errors->has('repassword')?'is-invalid':'' }}"
-						id="iRePassword" placeholder="RePassword">
-						<label for="iRePassword">Re rePassword</label>
+						id="iRePassword" placeholder="Re Password">
+						<label for="iRePassword">Re Password</label>
 						@if($errors->has('repassword'))
 						<div class="invalid-feedback">{{ $errors->first('repassword') }}</div>
 						@endif
